@@ -4,12 +4,12 @@ from sympy import *
 
 
 def binomial_expansion(num: int, coefficients: list[int]):
-    x, y = symbols('x y')
+    x, y = symbols("x y")
 
     expr = 0
 
     for i in range(num + 1):
-        expr += coefficients[i] * x ** i * y ** (num - i)
+        expr += coefficients[i] * x**i * y ** (num - i)
 
     return expr
 
@@ -40,4 +40,3 @@ if __name__ == "__main__":
     expr = binomial_expansion(exponent, pascal_row)
 
     print(expr)
-
